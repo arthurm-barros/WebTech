@@ -1,5 +1,5 @@
 /*Inteiros*/
-    @import url('colors.css');
+@import url('theme.css');
     * {
         margin: 0;
         padding: 0;
@@ -7,12 +7,12 @@
     }
     body {
         font-family: 'Poppins',sans-serif;
-        background-color: var(--slate-50);
+        background-color: var(--body_background);
         display: flex;
         flex-direction: column;
     }
     header {
-        background-color: var(--brand-400);
+        background-color: var(--hearder_background);
         padding: 0px 15px 0px 15px;
         text-align: left;
         display: flex;
@@ -33,34 +33,34 @@
     .container {
         display: flex;
         align-items: center;
-        background-color: var(--slate-200);
+        background-color: var(--container_background);
         border-radius: 12px;
         box-shadow: 0,0,7px,4px rgba(0, 0, 0, 25%);
     }
         .container .title {
-            background-color: var(--slate-500);
+            background-color: var(--container_background_title);
             border-radius: 8px;
             padding: 5px;
         }
         .container .categoric {
-            background-color: var(--slate-400);
+            background-color: var(--container_background_categoric);
             border-radius: 8px;
             padding: 5px;
         }
         .container .description {
-            background-color: var(--slate-200);
+            background-color: var(--container_background_description);
             border-radius: 8px;
             padding: 10px;
             overflow-y: scroll;
         }
         .container .price {
-            background-color: var(--slate-400);
+            background-color: var(--container_background_price_numbers);
             border-radius: 8px;
             padding: 5px;
             height: 15px;
         }
         .container .numbers {
-            background-color: var(--slate-400);
+            background-color: var(--container_background_price_numbers);
             border-radius: 8px;
             padding: 5px;
             height: 15px;
@@ -83,13 +83,13 @@
     }
     #text-modal {
             opacity: var(--text-opacity);
-            color: #ffffff;
-            background-color: #5B8EC9;
+            color: var(--text_color);
+            background-color: var(--Add_background);
             border-radius: 0 14px 14px 0;
             padding: 10px;
         }
 #add {
-    background-color: #5B8EC9;
+    background-color: var(--Add_background);
     border-radius: 16px;
     border: 0;
     padding: 10px;
@@ -107,7 +107,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        background-color: var(--brand-200);
+        background-color: var(--footer_background);
         display: flex;
         justify-content: space-between;
         align-items: center;

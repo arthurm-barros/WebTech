@@ -1,0 +1,28 @@
+@import url('colors.css');
+#light_theme {
+    --body_background: var(--slate-50);
+    --hearder_background: var(--brand-400);
+    --Add_background: var(--brand-200);
+    --footer_background: var(--brand-200);
+    --text_color: #ffffff;
+        --container_background: var(--slate-200);
+        --container_background_description: var(--brand-200);
+        --container_background_title: var(--brand-400);
+        --container_background_categoric: var(--brand-300);
+        --container_background_price_numbers: var(--brand-200);
+        --container_background_edit: var(--brand-400)
+        
+}
+#dark_theme {
+    --body_background: var(--slate-950);
+    --hearder_background: var(--brand-600);
+    --Add_background: var(--brand-800);
+    --footer_background: var(--brand-800);
+    --text_color: #ffffff;
+        --container_background: var(--slate-800);
+        --container_background_description: var(--brand-800);
+        --container_background_title: var(--brand-600);
+        --container_background_categoric: var(--brand-700);
+        --container_background_price_numbers: var(--brand-800);
+        --container_background_edit: var(--brand-600)
+}
