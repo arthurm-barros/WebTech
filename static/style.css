@@ -87,6 +87,7 @@
             background-color: var(--Add_background);
             border-radius: 0 14px 14px 0;
             padding: 10px;
+            transition: opacity 0.3 ease-in-out;
         }
 #add {
     background-color: var(--Add_background);
@@ -102,6 +103,36 @@
     width: 30px;
     height: auto;
 }
+/*Input*/
+#form-modal {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background: var(--body_background);
+  padding: 20px;
+  border-radius: 38px;
+  margin:  0 120px  0 120px ;
+}
+#name, #catego {
+  width: 100%;
+  border: solid var(--container_background_title) 2px;
+  border-radius: 24px;
+  padding: 14px;
+}
+
+#descrip {
+    grid-column: 1;
+    width: 100%;
+    border: solid var(--container_background_title) 2px;
+    border-radius: 24px;
+    padding: 14px;
+}
+#preco, #quantia {
+    width: 100%;
+    border: solid var(--container_background_title) 2px;
+    border-radius: 24px;
+    padding: 14px;
+}
 /*Rodapé*/
     footer {
         position: fixed;
@@ -114,3 +145,4 @@
         width: 100%;
         padding: 20px;
     }
+

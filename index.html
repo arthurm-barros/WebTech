@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="./theme.js" defer></script>
+    <script src="./input.js" defer></script>
     <title>WebTech</title>
 </head>
 <body id="light_theme">
@@ -19,7 +20,41 @@
             <button id="add"><img src="./images/Add.png" alt=""></button>
             <p id="text-modal">Adicionar Item.</p>
         </div>
-
+        <div id="saidera">
+        <form action="" id="form-modal">
+            <div class="group">
+                <label for="name">Nome do produto</label>
+                <input type="text" id="name" placeholder="Nome do Eletrônico" required>
+            </div>
+            <div class="group">
+                <label for="catego">Categoria</label>
+                <select id="catego" required>
+                    <option value="Acessorios">Acessórios</option>
+                    <option value="Computadores">Computadores</option>
+                    <option value="Comunicação">Comunicação</option>
+                    <option value="Entretenimento-multimidia">Entretenimento e multimidia</option>
+                    <option value="Audio">Áudio</option>
+                    <option value="Eletrodomesticos">Eletrodomésticos</option>
+                    <option value="Wearables">Wearables</option>
+                    <option value="Redes">Redes</option>
+                </select>
+            </div>
+            <div class="group">
+                <label for="descrip">Descrição</label>
+                <textarea name="descricao" id="descrip" placeholder="Dados do produto" required></textarea>
+            </div>
+            <div class="subgroup">
+            <div class="group">
+                <label for="preco">Preço</label>
+                <input type="number" name="" id="preco" required>
+            </div>
+            <div class="group">
+                <label for="quantia">Quantidade</label>
+                <input type="number" required id="quantia">
+            </div>
+            </div>
+        </form>
+        </div>
         <section id="container-local">
 
         </section>
