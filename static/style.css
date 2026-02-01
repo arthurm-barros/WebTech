@@ -87,7 +87,7 @@
             background-color: var(--Add_background);
             border-radius: 0 14px 14px 0;
             padding: 10px;
-            transition: opacity 0.3 ease-in-out;
+            transition: opacity 0.3s ease-in-out;
         }
 #add {
     background-color: var(--Add_background);
@@ -109,29 +109,36 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   background: var(--body_background);
+  box-shadow: 0 0 3px 3px var(--Add_background);
   padding: 20px;
   border-radius: 38px;
   margin:  0 120px  0 120px ;
+  z-index: 999;
 }
-#name, #catego {
+#name, #catego,#preco,#quantia,#descrip {
   width: 100%;
+  border: none;
   border: solid var(--container_background_title) 2px;
   border-radius: 24px;
   padding: 14px;
+  font-size: 17px;
+  transition: transform 0.3s ease-in-out , box-shadow  0.3s ease-in-out;
+
+}
+#name:hover, #catego:hover,#preco:hover,#quantia:hover,#descrip:hover {
+  transform: scale(1.01) ;
+  box-shadow: 2px 2px 5px var(--Add_background);
+}
+#name:focus,#catego:focus,#preco:focus,#quantia:focus,#descrip:focus{
+    outline: none;
+    border: solid var(--container_background_title) 2px;
+
 }
 
 #descrip {
+    resize: none;
     grid-column: 1;
-    width: 100%;
-    border: solid var(--container_background_title) 2px;
-    border-radius: 24px;
-    padding: 14px;
-}
-#preco, #quantia {
-    width: 100%;
-    border: solid var(--container_background_title) 2px;
-    border-radius: 24px;
-    padding: 14px;
+    overflow-y: auto;
 }
 /*Rodapé*/
     footer {
