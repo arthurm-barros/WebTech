@@ -7,11 +7,14 @@ Add.addEventListener('click', (event)=> {
     dialog.showModal()
     dialog.style.display = 'grid'
     backdropDiv.style.display = 'block'
+    dialog.blur()
 })
 
-backdropDiv.addEventListener('click', () => {
-    backdropDiv.style.display = 'none'
-    dialog.close()
-    dialog.style.display = 'none'
-    console.log('A')
+document.addEventListener('click', (event) => {
+    if (event.target === document.documentElement) {
+        backdropDiv.style.display = 'none'
+        dialog.close()
+        dialog.style.display = 'none'
+        console.log('A')
+    }
 })
