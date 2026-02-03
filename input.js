@@ -1,12 +1,17 @@
 const Add = document.getElementById('add')
-const form = document.getElementById('form-modal')
+const backdropDiv = document.querySelector('.dialog-backdrop-div')
+const dialog = document.getElementById('form-modal')
+
 Add.addEventListener('click', (event)=> {
     event.preventDefault()
-    form.style.display = 'grid'
+    dialog.showModal()
+    dialog.style.display = 'grid'
+    backdropDiv.style.display = 'block'
 })
-form.addEventListener('click', (event) => {
-    event.preventDefault()
-    if (event.target === form){
-    form.style.display = 'none'
-    }
+
+backdropDiv.addEventListener('click', () => {
+    backdropDiv.style.display = 'none'
+    dialog.close()
+    dialog.style.display = 'none'
+    console.log('A')
 })
