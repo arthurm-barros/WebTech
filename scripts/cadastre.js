@@ -1,6 +1,6 @@
 const Add = document.getElementById('add')
 const backdropDiv = document.querySelector('.dialog-backdrop-div')
-const dialog = document.getElementById('form-modal')
+const dialog = document.getElementById('cadastre-modal')
 const cadastreButton = document.querySelector('.cadastre-button')
 
 Add.addEventListener('click', (event)=> {

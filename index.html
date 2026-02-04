@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <script src="scripts/input.js" defer></script>
+    <script src="scripts/cadastre.js" defer></script>
     <script src="scripts/theme.js" defer></script>
     <script src="scripts/app.js" defer></script>
     <title>WebTech</title>
@@ -23,7 +23,8 @@
         </div>
 
         <div class="dialog-backdrop-div" style="display: none;"></div>
-        <dialog id="form-modal" style="display: none;">
+        <dialog id="cadastre-modal" class="form-modal" style="display: none;">
+            <h2>Cadastrar item</h2>
             <div class="group">
                 <label for="name">Nome do produto</label>
                 <input type="text" id="name" placeholder="Nome do Eletrônico" required>
@@ -58,6 +59,45 @@
 
             <button class="cadastre-button">Cadastrar</button>
         </dialog>
+
+        <dialog id="edit-modal" class="form-modal" style="display: none;">
+            <h2>Editar item</h2>
+            <div class="group">
+                <label for="name">Nome do produto</label>
+                <input type="text" id="name" placeholder="Nome do Eletrônico" required>
+            </div>
+            <div class="group">
+                <label for="catego">Categoria</label>
+                <select id="catego" required>
+                    <option value="Acessorios">Acessórios</option>
+                    <option value="Computadores">Computadores</option>
+                    <option value="Comunicação">Comunicação</option>
+                    <option value="Entretenimento-multimidia">Entretenimento e multimidia</option>
+                    <option value="Audio">Áudio</option>
+                    <option value="Eletrodomesticos">Eletrodomésticos</option>
+                    <option value="Wearables">Wearables</option>
+                    <option value="Redes">Redes</option>
+                </select>
+            </div>
+            <div class="group">
+                <label for="descrip">Descrição</label>
+                <textarea name="descricao" id="descrip" placeholder="Dados do produto" required></textarea>
+            </div>
+            <div class="subgroup">
+            <div class="group">
+                <label for="preco">Preço</label>
+                <input type="number" name="" id="preco" required>
+            </div>
+            <div class="group">
+                <label for="quantia">Quantidade</label>
+                <input type="number" required id="quantia">
+            </div>
+            </div>
+
+            <button class="cadastre-button">Salvar</button>
+        </dialog>
+        </dialog>
+
         <section id="container-local">
 
         </section>

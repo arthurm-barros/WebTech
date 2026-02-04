@@ -183,7 +183,7 @@
     height: auto;
 }
 /*Input*/
-#form-modal {
+.form-modal {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -215,7 +215,7 @@
     background-color: var(--slate-400);
     opacity: .3;
 }
-#form-modal::backdrop {
+.form-modal::backdrop {
     display: none;
 }
 :where(#name, #catego, #preco, #quantia, #descrip):hover {

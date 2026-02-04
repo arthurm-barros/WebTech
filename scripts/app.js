@@ -1,4 +1,6 @@
 const containerLocal = document.querySelector('#container-local')
+const editModal = document.querySelector('#edit-modal')
+const baskdropDiv = document.querySelector('.dialog-backdrop-div')
 
 document.addEventListener('DOMContentLoaded', () => {
     const productsLSString = localStorage.getItem('products')
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img class="eletronic" src="../images/Social.png">
                     </div>
                     <div class="buttons">
-                        <button class="button-edit">
+                        <button class="button-edit" data-productid="${product.id}">
                             <i class="bi bi-pencil-square"></i>
                             <span>Editar</span>
                         </button>
@@ -53,5 +55,55 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('products', JSON.stringify(_products))
             location.reload()
         })
+    }
+
+    const editButtons = document.querySelectorAll('.button-edit')
+    for (let button of editButtons) {
+        button.addEventListener('click', () => {
+            editModal.showModal()
+            editModal.style.display = 'grid'
+            backdropDiv.style.display = 'block'
+            editModal.blur()
+
+            const nameInput = editModal.querySelector('#name')
+            const categorySelect = editModal.querySelector('#catego')
+            const descriptionTextarea = editModal.querySelector('#descrip')
+            const priceInput = editModal.querySelector('#preco')
+            const quantityInput = editModal.querySelector('#quantia')
+            const saveButton = editModal.querySelector('button')
+
+            const products = JSON.parse(productsLSString)
+            for (let product of products) {
+                if (product.id == button.dataset.productid) {
+                    nameInput.value = product.name
+                    categorySelect.value = product.category
+                    descriptionTextarea.value = product.description
+                    priceInput.value = product.price
+                    quantityInput.value = product.quantity
+                }
+            }
+
+            saveButton.addEventListener('click', () => {
+                for (let product of products) {
+                    if (product.id == button.dataset.productid) {
+                        product.name = nameInput.value
+                        product.category = categorySelect.value
+                        product.description = descriptionTextarea.value
+                        product.price = priceInput.value
+                        product.quantity = quantityInput.value
+                        localStorage.setItem('products', JSON.stringify(products))
+                        location.reload()
+                    }
+                }
+            })
+        })
+    }
+})
+
+document.addEventListener('click', (event) => {
+    if (event.target === document.documentElement) {
+        backdropDiv.style.display = 'none'
+        editModal.close()
+        editModal.style.display = 'none'
     }
 })
