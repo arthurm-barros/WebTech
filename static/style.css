@@ -117,7 +117,7 @@
   place-self: center;
   border: none;
 }
-#name, #catego,#preco,#quantia,#descrip {
+#name, #catego, #preco, #quantia, #descrip {
   width: 100%;
   border: none;
   border: solid var(--container_background_title) 2px;
@@ -138,18 +138,16 @@
 }
 #form-modal::backdrop {
     display: none;
-
 }
-#name:hover, #catego:hover,#preco:hover,#quantia:hover,#descrip:hover {
+:where(#name, #catego, #preco, #quantia, #descrip):hover {
   transform: scale(1.01) ;
   box-shadow: 2px 2px 5px var(--Add_background);
 }
-#name:focus,#catego:focus,#preco:focus,#quantia:focus,#descrip:focus{
+:where(#name, #catego, #preco, #quantia, #descrip):focus {
     outline: none;
     border: solid var(--container_background_title) 2px;
 
 }
-
 #descrip {
     resize: none;
     grid-column: 1;
@@ -167,4 +165,3 @@
         width: 100%;
         padding: 20px;
     }
-

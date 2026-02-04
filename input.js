@@ -15,6 +15,5 @@ document.addEventListener('click', (event) => {
         backdropDiv.style.display = 'none'
         dialog.close()
         dialog.style.display = 'none'
-        console.log('A')
     }
 })
