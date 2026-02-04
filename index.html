@@ -26,36 +26,38 @@
         <div class="dialog-backdrop-div" style="display: none;"></div>
         <dialog id="cadastre-modal" class="form-modal" style="display: none;">
             <h2>Cadastrar item</h2>
-            <div class="group">
-                <label for="name">Nome do produto</label>
-                <input type="text" id="name" placeholder="Nome do Eletrônico" required>
-            </div>
-            <div class="group">
-                <label for="catego">Categoria</label>
-                <select id="catego" required>
-                    <option value="Acessorios">Acessórios</option>
-                    <option value="Computadores">Computadores</option>
-                    <option value="Comunicação">Comunicação</option>
-                    <option value="Entretenimento-multimidia">Entretenimento e multimidia</option>
-                    <option value="Audio">Áudio</option>
-                    <option value="Eletrodomesticos">Eletrodomésticos</option>
-                    <option value="Wearables">Wearables</option>
-                    <option value="Redes">Redes</option>
-                </select>
-            </div>
-            <div class="group">
-                <label for="descrip">Descrição</label>
-                <textarea name="descricao" id="descrip" placeholder="Dados do produto" required></textarea>
-            </div>
-            <div class="subgroup">
-            <div class="group">
-                <label for="preco">Preço</label>
-                <input type="number" name="" id="preco" required>
-            </div>
-            <div class="group">
-                <label for="quantia">Quantidade</label>
-                <input type="number" required id="quantia">
-            </div>
+            <div class="form-area">
+                <div class="group">
+                    <label for="name">Nome do produto</label>
+                    <input type="text" id="name" placeholder="Nome do Eletrônico" required>
+                </div>
+                <div class="group">
+                    <label for="catego">Categoria</label>
+                    <select id="catego" required>
+                        <option value="Acessorios">Acessórios</option>
+                        <option value="Computadores">Computadores</option>
+                        <option value="Comunicação">Comunicação</option>
+                        <option value="Entretenimento-multimidia">Entretenimento e multimidia</option>
+                        <option value="Audio">Áudio</option>
+                        <option value="Eletrodomesticos">Eletrodomésticos</option>
+                        <option value="Wearables">Wearables</option>
+                        <option value="Redes">Redes</option>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="descrip">Descrição</label>
+                    <textarea name="descricao" id="descrip" placeholder="Dados do produto" required></textarea>
+                </div>
+                <div class="subgroup">
+                <div class="group">
+                    <label for="preco">Preço</label>
+                    <input type="number" name="" id="preco" required>
+                </div>
+                <div class="group">
+                    <label for="quantia">Quantidade</label>
+                    <input type="number" required id="quantia">
+                </div>
+                </div>
             </div>
 
             <button class="cadastre-button">Cadastrar</button>

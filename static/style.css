@@ -185,23 +185,38 @@
 }
 /*Input*/
 .form-modal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
   background: var(--body_background);
   box-shadow: 0 0 3px 3px var(--Add_background);
   padding: 20px;
-  border-radius: 38px;
+  border-radius: 24px;
   margin:  0 120px  0 120px ;
   z-index: 999;
   place-self: center;
   border: none;
 }
+.form-modal h2 {
+    color: var(--modal_title_color);
+    font-weight: 600;
+    font-size: 24px;
+    margin: 4px 0 0.35em;
+}
+.form-modal label {
+    color: var(--modal_label_color);
+}
+.form-modal :where(input, select, textarea) {
+    margin-top: 5px;
+}
+.form-modal .form-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.form-modal
 #name, #catego, #preco, #quantia, #descrip {
   width: 100%;
   border: none;
   border: solid var(--container_background_title) 2px;
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 14px;
   font-size: 17px;
   transition: transform 0.3s ease-in-out , box-shadow  0.3s ease-in-out;
@@ -215,6 +230,7 @@
     left: 0;
     background-color: var(--slate-400);
     opacity: .3;
+    position: fixed;
 }
 .form-modal::backdrop {
     display: none;

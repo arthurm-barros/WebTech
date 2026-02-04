@@ -4,9 +4,11 @@
     --hearder_background: var(--brand-400);
     --Add_background: var(--brand-200);
     --footer_background: var(--brand-200);
+    --modal_title_color: var(--brand-500);
+    --modal_label_color: var(--brand-400);
     --text_color: #ffffff;
-        --container_background: var(--slate-200);
-        --container_background_description: var(--brand-200);
+    --container_background: var(--slate-200);
+    --container_background_description: var(--brand-200);
         --container_background_title: var(--brand-400);
         --container_background_category: var(--brand-300);
         --container_background_price_numbers: var(--brand-200);
@@ -18,6 +20,8 @@
     --hearder_background: var(--brand-600);
     --Add_background: var(--brand-800);
     --footer_background: var(--brand-800);
+    --modal_title_color: var(--slate-100);
+    --modal_label_color: var(--slate-50);
     --text_color: #ffffff;
         --container_background: var(--slate-800);
         --container_background_description: var(--brand-800);
