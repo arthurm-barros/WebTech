@@ -3,27 +3,6 @@ const backdropDiv = document.querySelector('.dialog-backdrop-div')
 const dialog = document.getElementById('form-modal')
 const cadastreButton = document.querySelector('.cadastre-button')
 
-function updatePage() {
-    const containerLocal = document.querySelector('#container-local')
-    let index = containerLocal.children.length
-    const products = JSON.parse(localStorage.getItem('products'))
-    const product = products[index]
-
-    containerLocal.insertAdjacentHTML(
-        'beforebegin',
-        `
-        <div class="container">
-            <h3 class="title">${product.name}</h3>
-            <strong class="category">${product.category}</strong>
-            <p class="description">${product.description}</p>
-            <span class="price">${product.price}</span>
-            <span class="numbers">A</span>
-            <img class="eletronic" src="../images/Social.png">
-        </div>
-        `
-    )
-}
-
 Add.addEventListener('click', (event)=> {
     event.preventDefault()
     dialog.showModal()
@@ -62,11 +41,13 @@ cadastreButton.addEventListener('click', () => {
     descriptionTextarea.value = ''
 
     if (localStorage.getItem('products') === '') {
+        productObject.id = 1
         localStorage.setItem('products', JSON.stringify([productObject]))
     } else {
         const products = JSON.parse(localStorage.getItem('products'))
+        productObject.id = products.length + 1
         products.push(productObject)
         localStorage.setItem('products', JSON.stringify(products))
     }
-    updatePage()
+    location.reload()
 })
