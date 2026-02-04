@@ -1,6 +1,21 @@
 const containerLocal = document.querySelector('#container-local')
 const editModal = document.querySelector('#edit-modal')
 const baskdropDiv = document.querySelector('.dialog-backdrop-div')
+
+function fixValue(value) {
+    let new_value = ''
+    for (let char of value) {
+        if ('0123456789.'.includes(char)) {
+            new_value += char
+        }
+    }
+
+    if (new_value !== '') {
+        return Number(new_value)
+    }
+    return 0
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Tema
     const theme = localStorage.getItem('theme')
@@ -21,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="container">
                 <div class="image-column">
                     <div class="image-container">
-                        <img class="eletronic" src="../images/Social.png">
+                        <img class="eletronic" src="../images/icon.png">
                     </div>
                     <div class="buttons">
                         <button class="button-edit" data-productid="${product.id}">
@@ -95,8 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         product.name = nameInput.value
                         product.category = categorySelect.value
                         product.description = descriptionTextarea.value
-                        product.price = priceInput.value
-                        product.quantity = quantityInput.value
+                        product.price = Number.parseFloat(fixValue(priceInput.value)).toFixed(2)
+                        product.quantity = Number(fixValue(quantityInput.value))
                         localStorage.setItem('products', JSON.stringify(products))
                         location.reload()
                     }

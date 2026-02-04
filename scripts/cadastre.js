@@ -3,6 +3,20 @@ const backdropDiv = document.querySelector('.dialog-backdrop-div')
 const dialog = document.getElementById('cadastre-modal')
 const cadastreButton = document.querySelector('.cadastre-button')
 
+function fixValue(value) {
+    let new_value = ''
+    for (let char of value) {
+        if ('0123456789.'.includes(char)) {
+            new_value += char
+        }
+    }
+
+    if (new_value) {
+        return Number(new_value)
+    }
+    return 0
+}
+
 Add.addEventListener('click', (event)=> {
     event.preventDefault()
     dialog.showModal()
@@ -34,8 +48,8 @@ cadastreButton.addEventListener('click', () => {
     const productObject = {
         name: nameInput.value,
         category: categorySelect.value,
-        price: Number.parseFloat(priceInput.value).toFixed(2),
-        quantity: Number(qtdInput.value),
+        price: fixValue(priceInput.value).toFixed(2),
+        quantity: Number(fixValue(qtdInput.value)),
         description: descriptionTextarea.value
     }
 
@@ -54,5 +68,6 @@ cadastreButton.addEventListener('click', () => {
         products.push(productObject)
         localStorage.setItem('products', JSON.stringify(products))
     }
+
     location.reload()
 })
