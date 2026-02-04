@@ -1,7 +1,7 @@
 # WebTech
 [Acesse o design aqui.](https://www.figma.com/design/Fdm4b9IXwf5PWrnIw2dYnK/Untitled?node-id=0-1&t=elhKBxdcuPRvc26N-1)
 
-## Rodando 
+### Rodando 
 Em caso de primeiro acesso o site se iniciará completamente vazio, com tema claro como padrão, podendo ser alterado no botão indicado no *Header*, caso contrário, e tenha cadastrado um item, haverá a persistência dos produtos.
 
 ### Relação de Afazeres:
