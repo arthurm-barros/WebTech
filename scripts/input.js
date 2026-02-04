@@ -55,6 +55,12 @@ cadastreButton.addEventListener('click', () => {
         description: descriptionTextarea.value
     }
 
+    nameInput.value = ''
+    categorySelect.value = 'Acessórios'
+    priceInput.value = ''
+    qtdInput.value = 0
+    descriptionTextarea.value = ''
+
     if (localStorage.getItem('products') === '') {
         localStorage.setItem('products', JSON.stringify([productObject]))
     } else {
