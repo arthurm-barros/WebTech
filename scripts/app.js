@@ -3,6 +3,13 @@ const editModal = document.querySelector('#edit-modal')
 const baskdropDiv = document.querySelector('.dialog-backdrop-div')
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Tema
+    const theme = localStorage.getItem('theme')
+    if (theme === 'dark_theme') {
+        body.id = 'dark_theme'
+    }
+
+    // Produtos
     const productsLSString = localStorage.getItem('products')
 
     if (!productsLSString) {

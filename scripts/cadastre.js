@@ -26,11 +26,16 @@ cadastreButton.addEventListener('click', () => {
     const qtdInput = dialog.querySelector('#quantia')
     const descriptionTextarea = dialog.querySelector('#descrip')
 
+    if (!nameInput.value) {
+        alert('Digite um nome para o produto')
+        return
+    }
+
     const productObject = {
         name: nameInput.value,
         category: categorySelect.value,
-        price: priceInput.value,
-        quantity: qtdInput.value,
+        price: Number.parseFloat(priceInput.value).toFixed(2),
+        quantity: Number(qtdInput.value),
         description: descriptionTextarea.value
     }
 

@@ -12,6 +12,7 @@
         background-color: var(--body_background);
         display: flex;
         flex-direction: column;
+        height: 100vh;
     }
     header {
         background-color: var(--hearder_background);
@@ -211,7 +212,16 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
-.form-modal
+.form-modal button {
+  width: 69%;
+  margin: 20px auto 0;
+  height: 3em;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--brand-500);
+  color: white;
+  letter-spacing: 2px;
+}
 #name, #catego, #preco, #quantia, #descrip {
   width: 100%;
   border: none;
@@ -220,6 +230,8 @@
   padding: 14px;
   font-size: 17px;
   transition: transform 0.3s ease-in-out , box-shadow  0.3s ease-in-out;
+  background: none;
+  color: var(--modal_input_color);
 }
 .dialog-backdrop-div {
     z-index: 998;
@@ -235,6 +247,9 @@
 .form-modal::backdrop {
     display: none;
 }
+.form-modal *::placeholder {
+    color: var(--modal_placeholder_color);
+}
 :where(#name, #catego, #preco, #quantia, #descrip):hover {
   transform: scale(1.01) ;
   box-shadow: 2px 2px 5px var(--Add_background);
@@ -242,7 +257,6 @@
 :where(#name, #catego, #preco, #quantia, #descrip):focus {
     outline: none;
     border: solid var(--container_background_title) 2px;
-
 }
 #descrip {
     resize: none;
