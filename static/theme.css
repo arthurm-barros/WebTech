@@ -8,7 +8,7 @@
         --container_background: var(--slate-200);
         --container_background_description: var(--brand-200);
         --container_background_title: var(--brand-400);
-        --container_background_categoric: var(--brand-300);
+        --container_background_category: var(--brand-300);
         --container_background_price_numbers: var(--brand-200);
         --container_background_edit: var(--brand-400)
         
@@ -22,7 +22,7 @@
         --container_background: var(--slate-800);
         --container_background_description: var(--brand-800);
         --container_background_title: var(--brand-600);
-        --container_background_categoric: var(--brand-700);
+        --container_background_category: var(--brand-700);
         --container_background_price_numbers: var(--brand-800);
         --container_background_edit: var(--brand-600)
 }

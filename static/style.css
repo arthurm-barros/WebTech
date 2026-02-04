@@ -42,8 +42,8 @@
             border-radius: 8px;
             padding: 5px;
         }
-        .container .categoric {
-            background-color: var(--container_background_categoric);
+        .container .category {
+            background-color: var(--container_background_category);
             border-radius: 8px;
             padding: 5px;
         }
@@ -155,7 +155,7 @@
 }
 /*Rodapé*/
     footer {
-        position: fixed;
+        /* position: fixed; */
         bottom: 0;
         left: 0;
         background-color: var(--footer_background);
