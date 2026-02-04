@@ -45,7 +45,7 @@ cadastreButton.addEventListener('click', () => {
     qtdInput.value = 0
     descriptionTextarea.value = ''
 
-    if (localStorage.getItem('products') === '') {
+    if (!localStorage.getItem('products')) {
         productObject.id = 1
         localStorage.setItem('products', JSON.stringify([productObject]))
     } else {

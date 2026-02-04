@@ -1,7 +1,6 @@
 const containerLocal = document.querySelector('#container-local')
 const editModal = document.querySelector('#edit-modal')
 const baskdropDiv = document.querySelector('.dialog-backdrop-div')
-
 document.addEventListener('DOMContentLoaded', () => {
     // Tema
     const theme = localStorage.getItem('theme')
